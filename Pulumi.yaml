@@ -1,0 +1,19 @@
+name: datacorp
+runtime: nodejs
+description: Multi-tenant customer storage provisioning for DataCorp
+
+template:
+  description: Deploy an isolated, encrypted S3 storage bucket for a new customer
+  config:
+    customerName:
+      type: string
+      description: Customer name (lowercase, alphanumeric and hyphens only)
+    aws:region:
+      description: AWS region for data residency
+      default: us-west-2
+      allowedValues:
+        - us-west-2
+        - us-east-1
+        - eu-west-1
+        - eu-central-1
+        - ap-southeast-1

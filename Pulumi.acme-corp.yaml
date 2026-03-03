@@ -1,0 +1,5 @@
+config:
+  datacorp:customerName: acme-corp
+  aws:region: us-west-2
+environment:
+  - default/dev-sandbox

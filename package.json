@@ -1,0 +1,16 @@
+{
+  "name": "datacorp",
+  "version": "1.0.0",
+  "description": "Multi-tenant customer storage provisioning for DataCorp",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@pulumi/pulumi": "^3",
+    "@pulumi/aws": "^6"
+  },
+  "devDependencies": {
+    "typescript": "^5"
+  }
+}
