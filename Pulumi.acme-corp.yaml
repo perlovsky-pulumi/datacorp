@@ -2,4 +2,13 @@ config:
   datacorp:customerName: acme-corp
   aws:region: us-west-2
 environment:
-  - default/dev-sandbox
+  imports:
+    - default/dev-sandbox
+  values:
+    pulumiConfig:
+      aws:region: ${aws.region}
+    environmentVariables:
+      AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
+      AWS_SECRET_ACCESS_KEY: ${aws.login.secretAccessKey}
+      AWS_SESSION_TOKEN: ${aws.login.sessionToken}
+      AWS_REGION: ${aws.region}

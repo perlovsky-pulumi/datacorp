@@ -5,7 +5,6 @@ const config = new pulumi.Config();
 const customerName = config.require("customerName");
 
 const region = aws.getRegionOutput();
-const callerIdentity = aws.getCallerIdentityOutput();
 
 const commonTags = {
     Project: "datacorp",
