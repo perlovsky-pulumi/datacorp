@@ -1,0 +1,9 @@
+settings:
+  sourceContext:
+    git:
+      repoUrl: https://github.com/perlovsky-pulumi/datacorp.git
+      branch: refs/heads/main
+      repoDir: projects/datacorp
+  operationContext:
+    preRunCommands:
+      - npm install
