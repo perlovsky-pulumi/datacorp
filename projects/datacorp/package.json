@@ -9,7 +9,7 @@
   "dependencies": {
     "@pulumi/pulumi": "^3",
     "@pulumi/aws": "^6",
-    "@pulumi/secure-bucket": "file:../../components/pulumi-secure-bucket"
+    "@pulumi/secure-bucket": "^1.0.0"
   },
   "devDependencies": {
     "typescript": "^5"
