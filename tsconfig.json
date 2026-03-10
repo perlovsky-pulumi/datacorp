@@ -10,5 +10,5 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true
   },
-  "files": ["index.ts", "secureBucket.ts"]
+  "files": ["index.ts"]
 }
