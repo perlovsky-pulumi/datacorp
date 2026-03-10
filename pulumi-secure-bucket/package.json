@@ -1,0 +1,24 @@
+{
+  "name": "@pulumi/secure-bucket",
+  "version": "1.0.0",
+  "description": "Pulumi component for secure, encrypted S3 buckets with KMS, versioning, and TLS-only access",
+  "main": "bin/index.js",
+  "types": "bin/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "pulumi": {
+    "resource": true
+  },
+  "peerDependencies": {
+    "@pulumi/pulumi": "^3",
+    "@pulumi/aws": "^6"
+  },
+  "devDependencies": {
+    "@pulumi/pulumi": "^3",
+    "@pulumi/aws": "^6",
+    "typescript": "^5"
+  },
+  "files": ["bin/**/*.js", "bin/**/*.d.ts"]
+}

@@ -1,0 +1,71 @@
+{
+    "name": "secure-bucket",
+    "displayName": "Secure Bucket",
+    "version": "1.0.0",
+    "description": "A Pulumi component for creating secure, encrypted S3 buckets with KMS, versioning, and TLS-only access. Created by Daniel Perlovsky.",
+    "publisher": "pulumi",
+    "license": "Apache-2.0",
+    "keywords": ["pulumi", "aws", "s3", "security", "category/cloud", "kind/component"],
+    "resources": {
+        "pulumi:secure-bucket:SecureBucket": {
+            "isComponent": true,
+            "description": "Creates an encrypted S3 bucket with KMS encryption, versioning, public access blocking, and a TLS-only bucket policy.",
+            "inputProperties": {
+                "customerName": {
+                    "type": "string",
+                    "description": "The customer name used for bucket naming and tagging."
+                },
+                "owner": {
+                    "type": "string",
+                    "description": "The owner ARN for tagging. Defaults to the caller's IAM ARN."
+                },
+                "tags": {
+                    "type": "object",
+                    "additionalProperties": { "type": "string" },
+                    "description": "Additional tags to apply to all resources."
+                },
+                "kmsKeyArn": {
+                    "type": "string",
+                    "description": "An existing KMS key ARN. If omitted, a new KMS key is created with automatic rotation."
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Deployment environment for tagging. Defaults to 'production'."
+                },
+                "projectName": {
+                    "type": "string",
+                    "default": "datacorp",
+                    "plain": true,
+                    "description": "Project name used for resource naming and tagging."
+                },
+                "allowedRegions": {
+                    "type": "array",
+                    "items": { "type": "string" },
+                    "default": ["us-west-2", "ca-central-1"],
+                    "plain": true,
+                    "description": "Allowed AWS regions. Deployment fails if the current region is not in this list."
+                }
+            },
+            "requiredInputs": ["customerName"],
+            "properties": {
+                "bucketName": { "type": "string", "description": "The name of the S3 bucket." },
+                "bucketArn": { "type": "string", "description": "The ARN of the S3 bucket." },
+                "bucketId": { "type": "string", "description": "The ID of the S3 bucket." },
+                "kmsKeyArn": { "type": "string", "description": "The ARN of the KMS key." },
+                "kmsKeyId": { "type": "string", "description": "The ID of the KMS key." }
+            },
+            "required": ["bucketName", "bucketArn", "bucketId", "kmsKeyArn", "kmsKeyId"]
+        }
+    },
+    "language": {
+        "nodejs": {
+            "dependencies": {
+                "@pulumi/aws": "^6.0.0"
+            },
+            "devDependencies": {
+                "typescript": "^5.0.0"
+            },
+            "respectSchemaVersion": true
+        }
+    }
+}
