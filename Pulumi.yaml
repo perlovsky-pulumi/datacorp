@@ -3,6 +3,7 @@ runtime: nodejs
 description: Multi-tenant customer storage provisioning for DataCorp
 
 template:
+  displayName: DataCorp Customer Storage
   description: Deploy an isolated, encrypted S3 storage bucket for a new customer
   config:
     customerName:
@@ -13,7 +14,8 @@ template:
       default: us-west-2
       allowedValues:
         - us-west-2
-        - us-east-1
-        - eu-west-1
-        - eu-central-1
-        - ap-southeast-1
+        - ca-central-1
+    owner:
+      type: string
+      description: Override the default owner (auto-detected from IAM caller identity)
+      default: ""
