@@ -1,12 +1,7 @@
 settings:
-  gitHub:
-    repository: perlovsky-pulumi/datacorp
-    deployCommits: true
-    previewPullRequests: true
-    paths:
-      - projects/datacorp/**
   sourceContext:
     git:
+      repoUrl: https://github.com/perlovsky-pulumi/datacorp.git
       branch: refs/heads/main
       repoDir: projects/datacorp
   operationContext:
