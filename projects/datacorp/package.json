@@ -7,9 +7,9 @@
     "build": "tsc"
   },
   "dependencies": {
-    "@pulumi/pulumi": "^3",
     "@pulumi/aws": "^6",
-    "@pulumi/secure-bucket": "^1.0.0"
+    "@pulumi/pulumi": "^3",
+    "@pulumi/secure-bucket": "file:sdks/pulumi-secure-bucket"
   },
   "devDependencies": {
     "typescript": "^5"

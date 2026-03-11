@@ -1,7 +1,6 @@
 name: datacorp
 runtime: nodejs
 description: Multi-tenant customer storage provisioning for DataCorp
-
 template:
   displayName: DataCorp Customer Storage
   description: Deploy an isolated, encrypted S3 storage bucket for a new customer
@@ -19,3 +18,5 @@ template:
       type: string
       description: Override the default owner (auto-detected from IAM caller identity)
       default: ""
+packages:
+  secure-bucket: ../../components/pulumi-secure-bucket
