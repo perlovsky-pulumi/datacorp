@@ -1,12 +1,12 @@
 {
     "name": "secure-bucket",
     "displayName": "Secure Bucket",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "A Pulumi component for creating secure, encrypted S3 buckets with KMS, versioning, and TLS-only access. Created by Daniel Perlovsky.",
     "publisher": "pulumi",
     "license": "Apache-2.0",
     "keywords": ["pulumi", "aws", "s3", "security", "category/cloud", "kind/component"],
-    "pluginDownloadURL": "https://github.com/perlovsky-pulumi/datacorp/releases/download/${VERSION}",
+    "pluginDownloadURL": "https://api.pulumi.com/releases/plugins",
     "resources": {
         "pulumi:secure-bucket:SecureBucket": {
             "isComponent": true,

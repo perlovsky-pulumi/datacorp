@@ -1,1 +1,2 @@
 runtime: nodejs
+pluginDownloadURL: https://api.pulumi.com/releases/plugins
