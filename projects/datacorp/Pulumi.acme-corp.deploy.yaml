@@ -5,5 +5,8 @@ settings:
       branch: refs/heads/main
       repoDir: projects/datacorp
   operationContext:
+    options:
+      skipInstallDependencies: true
     preRunCommands:
+      - cd ../../components/pulumi-secure-bucket && npm install && npm run build
       - npm install

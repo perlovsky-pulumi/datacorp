@@ -6,7 +6,10 @@ settings:
       repoDir: projects/datacorp
   operationContext:
     options:
-      skipInstallDependencies: false
+      skipInstallDependencies: true
       skipIntermediateDeployments: true
       deleteAfterDestroy: false
       remediateIfDriftDetected: false
+    preRunCommands:
+      - cd ../../components/pulumi-secure-bucket && npm install && npm run build
+      - npm install
